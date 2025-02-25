@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import os
 import plotly.express as px
-from column_chart import generate_column_chart
 
 # Set page config
 st.set_page_config(page_title="UK Payments Industry Report", layout="wide")
@@ -122,6 +121,8 @@ st.write("A more efficient approach to accessing the higher-spending, older demo
 
 
 # Section: What do high-value transactions look like?
+from column_chart import generate_column_chart
+
 st.subheader("What do high-value transactions look like?")
 category_col = st.selectbox("Select Category", ["Customer Segment", "Merchant Category", "Sales Channel", "Location", "Customer Device Type", "Promotion/Discount Applied"])
 fig_column = generate_column_chart(category_col)
