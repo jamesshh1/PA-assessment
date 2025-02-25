@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import os
 import plotly.express as px
-import donut_chart
 from column_chart import generate_column_chart
 
 # Set page config
