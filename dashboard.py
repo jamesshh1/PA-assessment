@@ -27,7 +27,7 @@ df = pd.read_csv(DATA_FILE) if os.path.exists(DATA_FILE) else None
 
 # Section: What is this report about?
 st.subheader("What is this report about?")
-st.write("This report examines UK transaction data to uncover trends in payment method preferences, delivers granular insight on high-value transactions, and the possible causes of failed and chargeback transactions, offering actionable recommendations for each insight.")
+st.write("This report examines UK transaction data to uncover trends in payment method preferences, deliver granular insight on high-value transactions, and the possible causes of failed and chargeback transactions, offering actionable recommendations for each section.")
 
 # Section: Why is it important?
 st.subheader("Why is it important?")
@@ -37,8 +37,8 @@ st.write("Better understanding of these areas presents opportunities for increas
 st.subheader("What’s next?")
 st.write("Payment industry leaders should:")
 st.markdown("- Adapt strategies as electronic payments gain market share over time.")
-st.markdown("- Make strategic partnerships in the travel industry to capitalise on the markets higher value transactions and protect against fraud.")
-st.markdown("- Collaborate with banks operating in regions with higher rates of failed transactions and chargebacks to diagnose the cause of these issues, potentially improving infrastructure and access to credit for older customers.")
+st.markdown("- Make strategic partnerships in the travel industry to capitalise on the market's higher value transactions and protect against fraud.")
+st.markdown("- Collaborate with banks operating in regions with higher rates of failed transactions and chargebacks to diagnose the cause of these issues, potentially improving infrastructure and access to credit for older customers as a result.")
 
 # Section: Key insights
 st.subheader("Key insights")
@@ -103,8 +103,11 @@ if selected_category:
     # Rename columns with spaces and lowercase except first letter
     summary_df.columns = [col.replace("_", " ").capitalize() for col in summary_df.columns]
 
+    # Format median transaction value with '£' symbol
+    summary_df["Median transaction value"] = summary_df["Median transaction value"].apply(lambda x: f"£{x:,.2f}")
+
     # Use Markdown for smaller font size
-    st.markdown(f"<h4 style='font-size:18px;'>Most common payment method by {selected_category}</h4>", unsafe_allow_html=True)
+    st.markdown(f"<h4 style='font-size:18px;'>Most common payment method by: {selected_category}</h4>", unsafe_allow_html=True)
 
     # Display table without the far-left index column
     st.dataframe(summary_df, hide_index=True)
@@ -113,7 +116,7 @@ if selected_category:
 
 st.write("Though legacy transaction methods made up the majority of payments, digital wallets and mobile payments comprised 42% of transactions.")
 st.write("Electronic payments have an average transaction value of £338.93, significantly higher than the overall average transaction value of £256.66. This is despite electronic transactions being favoured by younger consumers who have a lower spend per transaction.")
-st.write('One explanation as to why consumers spend more via these payment methods is greater trust in digital payments. A 2023 report by [McKinsey](https://www.mckinsey.com/industries/financial-services/our-insights/banking-matters/consumer-digital-payments-already-mainstream-increasingly-embedded-still-evolving) showed 69% of respondents rated security and trust in the provider as among their top criteria when selecting a digital wallet.')
+st.write('One explanation as to why consumers spend more via these payment methods is greater trust in digital payments. A 2023 report by [McKinsey](https://www.mckinsey.com/industries/financial-services/our-insights/banking-matters/consumer-digital-payments-already-mainstream-increasingly-embedded-still-evolving) showed 69% of respondents rated security and trust in the provider among their top criteria when selecting a digital wallet.')
 st.write("The same report shows large banks hold the advantage in consumer trust but that fintech is narrowing the gap. Age is an important factor here: only 8% of the 55-plus demographic rated fintechs favorably.")
 st.write("Analysis for this report found 85% of electronic transactions came from users under the age of 46 (despite these users comprising 75% of the dataset) - with zero transactions among the over 60s - supporting a lack of trust and understanding among older consumers.")
 st.write("Another explanation is demographic differences in technology use. Desktop and mobile transactions were responsible for 85% of electronic transactions and these devices have lower usage among older customers. However, encouraging technological adoption among older customers is unlikely to be cost effective.")

@@ -27,8 +27,8 @@ def generate_column_chart(x_axis: str):
     # Create stacked column chart
     fig = px.bar(
         agg_df, x=x_axis, y="Total Amount (£)", color="Payment Method",
-        title=f"Total transaction amount for each payment method by {x_axis}",
-        subtitle="Click on payment method in the key to remove that method for further filtering",
+        title=f"Total transaction amount for each payment method by: {x_axis}",
+        subtitle="Click on a payment method in the legend to remove that method for further filtering",
         labels={"Total Amount (£)": "Total Amount (£)"},
         barmode="stack",
         hover_data={
