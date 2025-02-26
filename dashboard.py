@@ -142,8 +142,13 @@ st.write("Both payment method and demographic data offer insight into failed and
 
 # Embed Flourish map
 st.components.v1.html("""
-<iframe src='https://flo.uri.sh/visualisation/21782069/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-""", height=700)
+<iframe src='https://flo.uri.sh/visualisation/21782069/embed' 
+title='Interactive or visual content' 
+class='flourish-embed-iframe' 
+frameborder='0' scrolling='no' 
+style='width:100%; height:600px; display:block; margin:0; padding:0;' 
+sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+""", height=600)
 
 st.write("Regional differences in failed and chargeback transactions could have several causes, one being higher fraud activity. The data in this study is insufficient to determine the prevalence of fraud but payments industry decision makers could remedy this through further analysis of transaction patterns - specific merchants, anomalous purchases, and consumer demographics - to identify hotspots.")
 st.write("Infrastructure and socio-economic factors are another potential cause. Customers aged over 45 were responsible for 65% of failed and chargeback transactions. Additionally, bank transfers and debit card payments were overrepresented in the failed and chargeback data.")
