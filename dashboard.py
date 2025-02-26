@@ -27,7 +27,7 @@ df = pd.read_csv(DATA_FILE) if os.path.exists(DATA_FILE) else None
 
 # Section: What is this report about?
 st.subheader("What is this report about?")
-st.write("This report examines UK transaction data to uncover trends in payment method preferences, deliver granular insight on high-value transactions, and the possible causes of failed and chargeback transactions, offering actionable recommendations for each insight.")
+st.write("This report examines UK transaction data to uncover trends in payment method preferences, delivers granular insight on high-value transactions, and the possible causes of failed and chargeback transactions, offering actionable recommendations for each insight.")
 
 # Section: Why is it important?
 st.subheader("Why is it important?")
@@ -124,12 +124,12 @@ st.write("A more efficient approach to accessing the higher-spending, older demo
 from column_chart import generate_column_chart
 
 st.subheader("What do high-value transactions look like?")
-category_col = st.selectbox("Select Category", ["Customer Segment", "Merchant Category", "Sales Channel", "Location", "Customer Device Type", "Promotion/Discount Applied"])
+category_col = st.selectbox("Select a category to see the value of transactions by payment method:", ["Customer Segment", "Merchant Category", "Sales Channel", "Location", "Customer Device Type", "Promotion/Discount Applied"])
 fig_column = generate_column_chart(category_col)
 st.plotly_chart(fig_column, use_container_width=True)
 
 st.write("All of the 10% highest value transactions - those above £640 - were paid via digital wallet and spent in the travel industry. Demographically, 86% of these payments were made by those aged between 36 and 45.")
-st.write("The high transaction values associated with travel make it a profitable sector for payments providers who can capitalise on this industry through strategic partnerships and loyalty programs. Such collaborations are already present in the market:")
+st.write("The high transaction values associated with travel make it a profitable sector for payment providers who can capitalise on this industry through strategic partnerships and loyalty programs. Such collaborations are already present in the market:")
 st.markdown("- Chase and United Airlines offer co-branded credit cards with bonus miles, free checked bags, and travel insurance.")
 st.markdown("- The American Express Platinum Card offers 5x points on flights and hotels booked through Amex Travel and luxury travel perks like exclusive airport lounge access.")
 st.write("Through these strategies, payment providers can expect increased transaction volume, retention of high-spending customers, and leveraging consumer loyalty to other brands through partnerships (e.g. the British Airways American Express card).")
@@ -145,8 +145,7 @@ st.components.v1.html("""
 <iframe src='https://flo.uri.sh/visualisation/21782069/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
 """, height=700)
 
-st.write("Regional differences in failed and chargeback transactions could have several causes.")
-st.write("One is higher fraud activity. The data in this study is insufficient to determine the prevalence of fraud but payments industry decision makers could remedy this through further analysis of transaction patterns - specific merchants, anomalous purchases, and consumer demographics - to identify hotspots.")
+st.write("Regional differences in failed and chargeback transactions could have several causes, one being higher fraud activity. The data in this study is insufficient to determine the prevalence of fraud but payments industry decision makers could remedy this through further analysis of transaction patterns - specific merchants, anomalous purchases, and consumer demographics - to identify hotspots.")
 st.write("Infrastructure and socio-economic factors are another potential cause. Customers aged over 45 were responsible for 65% of failed and chargeback transactions. Additionally, bank transfers and debit card payments were overrepresented in the failed and chargeback data.")
 st.write('Research by [S&P Global](https://www.spglobal.com/market-intelligence/en/news-insights/research/debit-surpasses-credit-as-consumers-preferred-payment-card) found lower-income households use debit cards more frequently than others, suggesting the overrepresentation of these payments amongst failed data could be due to insufficient funds. Financially pressured households may also be more likely to dispute transactions, increasing chargeback rates.')
 st.write("Notably, credit cards are absent from the failed and chargeback transactions data.")
