@@ -4,11 +4,15 @@ import os
 import plotly.express as px
 
 # Set page config
-st.set_page_config(page_title="UK Payments Industry Report", layout="wide")
+st.set_page_config(page_title="The State of the UK Payments Industry: Consumer behaviour, high-value payments, and resloving failed and chargeback transactions", layout="wide")
 
 # Centered title using markdown and HTML
 st.markdown(
-    "<h1 style='text-align: center;'>UK Payments Industry Report</h1>", 
+    "<h1 style='text-align: center;'>The State of the UK Payments Industry</h1>", 
+    unsafe_allow_html=True
+)
+st.markdown(
+    "<h4 style='text-align: center; font-weight: normal;'>Changing payment preferences, high-value transactions, and resolving failed and chargeback transactions</h4>", 
     unsafe_allow_html=True
 )
 
@@ -17,11 +21,6 @@ st.markdown(
     "<p style='text-align: center; font-size: 16px;'>27 February 2025<br>By James Hurren</p>",
     unsafe_allow_html=True
 )
-
-# Load data
-DATA_FILE = "cleaned_transactions.csv"
-df = pd.read_csv(DATA_FILE) if os.path.exists(DATA_FILE) else None
-
 
 
 
@@ -50,12 +49,10 @@ st.markdown("- The travel industry accounted for all of the top 10% highest valu
 st.markdown("- Failed and chargeback transactions are more prevalent in Bristol and Glasgow, among older customers, and among those making bank transfers and debit card payments.")
 
 
-
 # Section: How are payment methods changing?
 st.subheader("How are payment methods changing?")
-# Interactive tool
-import streamlit as st
-import pandas as pd
+
+# Interactive table
 
 # Load transaction data
 @st.cache_data
@@ -73,7 +70,6 @@ category_options = [
     "Customer Device Type"
 ]
 
-# st.title("Most Common Payment Method Analysis")
 
 # Dropdown menu for category selection
 selected_category = st.selectbox("Select a category to see the most common payment method, number of transactions and median transaction value for each market segment:", category_options)
@@ -111,7 +107,6 @@ if selected_category:
 
     # Display table without the far-left index column
     st.dataframe(summary_df, hide_index=True)
-
 
 
 st.write("Though legacy payment methods made up the majority of transactions, digital wallets and mobile payments comprised 42% of payments.")
