@@ -45,7 +45,7 @@ st.markdown("- Credit card transactions were the most popular payment method com
 st.markdown("- Younger users prefer these electronic payment methods, suggesting their market share will rise over time.")
 st.markdown("- Digital wallet payments had the highest average transaction value by a significant margin (both mean and median).")
 st.markdown("- Online represents the largest sales channel, with the majority of transactions coming from a mobile device.")
-st.markdown("- The travel industry accounted for all of the top 10% highest value transactions.")
+st.markdown("- The travel industry accounted for 91% of the highest value transactions.")
 st.markdown("- Failed and chargeback transactions are more prevalent in Bristol and Glasgow, among older customers, and among those making bank transfers and debit card payments.")
 
 
@@ -126,7 +126,7 @@ category_col = st.selectbox("Select a category to see the value of transactions 
 fig_column = generate_column_chart(category_col)
 st.plotly_chart(fig_column, use_container_width=True)
 
-st.write("All of the 10% highest value transactions - those above £640 - were paid via digital wallet and spent in the travel industry. Demographically, 86% of these payments were made by those aged between 36 and 45.")
+st.write("Of the 10% highest value transactions - those above £500.25 - 91% were paid via digital wallet and spent in the travel industry. Demographically, 86% of these high value payments were made by those aged between 36 and 45.")
 st.write("The high transaction values associated with travel make it a profitable sector for payment providers who can capitalise on this industry through strategic partnerships and loyalty programs. Such collaborations are already present in the market:")
 st.markdown("- Chase and United Airlines offer co-branded credit cards with bonus miles, free checked bags, and travel insurance.")
 st.markdown("- The American Express Platinum Card offers 5x points on flights and hotels booked through Amex Travel and luxury travel perks like exclusive airport lounge access.")
