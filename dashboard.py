@@ -114,7 +114,7 @@ if selected_category:
 
 
 
-st.write("Though legacy transaction methods made up the majority of payments, digital wallets and mobile payments comprised 42% of transactions.")
+st.write("Though legacy payment methods made up the majority of transactions, digital wallets and mobile payments comprised 42% of payments.")
 st.write("Electronic payments have an average transaction value of £338.93, significantly higher than the overall average transaction value of £256.66. This is despite electronic transactions being favoured by younger consumers who have a lower spend per transaction.")
 st.write('One explanation as to why consumers spend more via these payment methods is greater trust in digital payments. A 2023 report by [McKinsey](https://www.mckinsey.com/industries/financial-services/our-insights/banking-matters/consumer-digital-payments-already-mainstream-increasingly-embedded-still-evolving) showed 69% of respondents rated security and trust in the provider among their top criteria when selecting a digital wallet.')
 st.write("The same report shows large banks hold the advantage in consumer trust but that fintech is narrowing the gap. Age is an important factor here: only 8% of the 55-plus demographic rated fintechs favorably.")
@@ -153,11 +153,11 @@ style='width:100%; height:600px; display:block; margin:0; padding:0;'
 sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
 """, height=600)
 
-st.write("Regional differences in failed and chargeback transactions could have several causes, one being higher fraud activity. The data in this study is insufficient to determine the prevalence of fraud but payments industry decision makers could remedy this through further analysis of transaction patterns - specific merchants, anomalous purchases, and consumer demographics - to identify hotspots.")
+st.write("Regional differences in failed and chargeback transactions could have several causes, one being higher fraud activity. The data in this study is insufficient to confidently determine the prevalence of fraud but payments industry decision makers could remedy this through further analysis of transaction patterns - specific merchants, anomalous purchases, and consumer demographics - to identify hotspots.")
 st.write("Infrastructure and socio-economic factors are another potential cause. Customers aged over 45 were responsible for 65% of failed and chargeback transactions. Additionally, bank transfers and debit card payments were overrepresented in the failed and chargeback data.")
-st.write('Research by [S&P Global](https://www.spglobal.com/market-intelligence/en/news-insights/research/debit-surpasses-credit-as-consumers-preferred-payment-card) found lower-income households use debit cards more frequently than others, suggesting the overrepresentation of these payments amongst failed data could be due to insufficient funds. Financially pressured households may also be more likely to dispute transactions, increasing chargeback rates.')
+st.write('Research by [S&P Global](https://www.spglobal.com/market-intelligence/en/news-insights/research/debit-surpasses-credit-as-consumers-preferred-payment-card) found lower-income households use debit cards more frequently than others, suggesting the overrepresentation of these payments amongst failed transactions could be due to insufficient funds. Financially pressured households may also be more likely to dispute transactions, increasing chargeback rates.')
 st.write("Notably, credit cards are absent from the failed and chargeback transactions data.")
 
 st.write("Along with research into potential fraud activity, payments industry organisations should:")
 st.markdown("- Collaborate with banks active in high-risk regions to improve fraud detection models and generate more granular data regarding failed and chargeback transactions to better understand the cause of these issues.")
-st.markdown("- Encourage credit card adoption, especially among older customers. Stronger consumer protections for credit cards should reduce instances of fraud among this demographic where credit card adoption is low. A simplified authentication process, live customer service access, and fraud education campaigns could further reduce failed and chargeback transactions.")
+st.markdown("- Encourage credit card adoption, especially among older customers. Stronger consumer protections for credit cards should reduce instances of fraud among this demographic where credit card use is low. A simplified authentication process, live customer service access, and fraud education campaigns could further reduce failed and chargeback transactions.")
