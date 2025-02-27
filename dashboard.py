@@ -41,9 +41,9 @@ st.markdown("- Collaborate with banks operating in regions with higher rates of 
 
 # Section: Key insights
 st.subheader("Key insights")
-st.markdown("- Credit card transactions were the most popular payment method at 27%, though this is surpassed by the combined share of mobile payments and digital wallets (42%).")
-st.markdown("- Digital wallets had the highest average transaction value by a significant margin (both mean and median).")
+st.markdown("- Credit card transactions were the most popular payment method comprising 27% of all transactions, though this is surpassed by the combined share of mobile payments and digital wallets (42%).")
 st.markdown("- Younger users prefer these electronic payment methods, suggesting their market share will rise over time.")
+st.markdown("- Digital wallet payments had the highest average transaction value by a significant margin (both mean and median).")
 st.markdown("- Online represents the largest sales channel, with the majority of transactions coming from a mobile device.")
 st.markdown("- The travel industry accounted for all of the top 10% highest value transactions.")
 st.markdown("- Failed and chargeback transactions are more prevalent in Bristol and Glasgow, among older customers, and among those making bank transfers and debit card payments.")
